@@ -1,4 +1,4 @@
-<mxfile host="www.draw.io" modified="2019-10-21T07:45:45.943Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36" etag="c0zyg_Osc-Kdx6GUVKBO" version="12.1.3" type="github" pages="2">
+<mxfile host="www.draw.io" modified="2019-10-21T07:52:20.256Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36" etag="cbQo-7Rczk1wdPKEqIoL" version="12.1.3" type="github" pages="2">
   <diagram name="Page-1" id="5f0bae14-7c28-e335-631c-24af17079c00">
     <mxGraphModel dx="946" dy="591" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="#ffffff" math="0" shadow="0">
       <root>
@@ -124,7 +124,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="j_EdKH5aMAJMM57VGKOF" name="Page-2">
-    <mxGraphModel dx="926" dy="571" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="926" dy="522" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="Iivzt-dJwqlS0eaFPDWU-0"/>
         <mxCell id="Iivzt-dJwqlS0eaFPDWU-1" parent="Iivzt-dJwqlS0eaFPDWU-0"/>
@@ -206,7 +206,7 @@
         <mxCell id="Iivzt-dJwqlS0eaFPDWU-24" value="ACP 2.4（含）以后，kafka 地址不可能配错，如果没有日志，可能是kafka 集群异常。&lt;br&gt;如果写入失败，那是es 集群异常，这个是最可能的" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=1;fillColor=#f8cecc;strokeColor=#b85450;size=24;position=0.7;" vertex="1" parent="Iivzt-dJwqlS0eaFPDWU-1">
           <mxGeometry x="120" y="650" width="220" height="100" as="geometry"/>
         </mxCell>
-        <mxCell id="Iivzt-dJwqlS0eaFPDWU-25" value="check es 是否正常？&lt;br&gt;curl -XGET -u &amp;lt;username&amp;gt;:&amp;lt;password&amp;gt; localhost:9200/_cat/health&lt;br&gt;如果green 100%m" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=0;size=29;position=0.1;fillColor=#d5e8d4;strokeColor=#82b366;base=21;" vertex="1" parent="Iivzt-dJwqlS0eaFPDWU-1">
+        <mxCell id="Iivzt-dJwqlS0eaFPDWU-25" value="curl -XGET -u &amp;lt;username&amp;gt;:&amp;lt;password&amp;gt; localhost:9200/_cat/health&lt;br&gt;如果green 100%m" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=0;size=29;position=0.1;fillColor=#d5e8d4;strokeColor=#82b366;base=21;" vertex="1" parent="Iivzt-dJwqlS0eaFPDWU-1">
           <mxGeometry x="500" y="780" width="320" height="110" as="geometry"/>
         </mxCell>
         <mxCell id="Iivzt-dJwqlS0eaFPDWU-26" value="磁盘不足？&lt;br&gt;内存Xms 和Xmx&amp;nbsp;一般2g，limits 3g&lt;br&gt;索引&lt;br&gt;有red？ 非log，event，audit的话就删了" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=1;fillColor=#f8cecc;strokeColor=#b85450;size=24;position=0.7;" vertex="1" parent="Iivzt-dJwqlS0eaFPDWU-1">
