@@ -1,4 +1,4 @@
-<mxfile host="www.draw.io" modified="2019-10-21T07:11:36.324Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36" etag="qNszw_mXmmTBdV_77yqw" version="12.1.3" type="github" pages="2">
+<mxfile host="www.draw.io" modified="2019-10-21T07:45:45.943Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36" etag="c0zyg_Osc-Kdx6GUVKBO" version="12.1.3" type="github" pages="2">
   <diagram name="Page-1" id="5f0bae14-7c28-e335-631c-24af17079c00">
     <mxGraphModel dx="946" dy="591" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="#ffffff" math="0" shadow="0">
       <root>
@@ -185,8 +185,32 @@
         <mxCell id="Iivzt-dJwqlS0eaFPDWU-17" value="&lt;span style=&quot;white-space: normal&quot;&gt;如果文件日志没有产生，可以先看下：__FILE_LOG_PATH__是不是包含了目标文件路径&lt;/span&gt;" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=1;fillColor=#f8cecc;strokeColor=#b85450;size=24;position=0.7;" vertex="1" parent="Iivzt-dJwqlS0eaFPDWU-1">
           <mxGeometry x="110" y="200" width="220" height="80" as="geometry"/>
         </mxCell>
-        <mxCell id="Iivzt-dJwqlS0eaFPDWU-18" value="&lt;span style=&quot;white-space: normal&quot;&gt;如果文件日志没有产生，可以先看下：__FILE_LOG_PATH__是不是包含了目标文件路径&lt;/span&gt;" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=1;fillColor=#f8cecc;strokeColor=#b85450;size=24;position=0.7;" vertex="1" parent="Iivzt-dJwqlS0eaFPDWU-1">
+        <mxCell id="Iivzt-dJwqlS0eaFPDWU-18" value="1. 查看配置的ingress 地址 ,token。&lt;br&gt;2. 部分实施反应，对7层的测试不够充分，可以单独改成4层" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=1;fillColor=#f8cecc;strokeColor=#b85450;size=24;position=0.7;" vertex="1" parent="Iivzt-dJwqlS0eaFPDWU-1">
           <mxGeometry x="110" y="315" width="220" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="Iivzt-dJwqlS0eaFPDWU-19" value="正常情况下，tail -f /var/log/mathilde/tiny.info.log&lt;br&gt;日志会是清爽的：Topic: ALAUDA_LOG_TOPIC Partition: 29 Offset: 35085，不断打出来" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=0;size=29;position=0.1;fillColor=#d5e8d4;strokeColor=#82b366;base=21;" vertex="1" parent="Iivzt-dJwqlS0eaFPDWU-1">
+          <mxGeometry x="490" y="430" width="320" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="Iivzt-dJwqlS0eaFPDWU-20" value="异常情况下，一般是kakfa 工作异常&lt;br&gt;可以看下kafka 的配置地址，2.4（含）以后，kafka 地址为服务发现地址，一般不会错了。" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=1;fillColor=#f8cecc;strokeColor=#b85450;size=24;position=0.7;" vertex="1" parent="Iivzt-dJwqlS0eaFPDWU-1">
+          <mxGeometry x="110" y="420" width="220" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="Iivzt-dJwqlS0eaFPDWU-21" value="kafka 一般不会出问题，正常日志一般是INFO等级的" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=0;size=29;position=0.1;fillColor=#d5e8d4;strokeColor=#82b366;base=21;" vertex="1" parent="Iivzt-dJwqlS0eaFPDWU-1">
+          <mxGeometry x="490" y="550" width="320" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="Iivzt-dJwqlS0eaFPDWU-22" value="1. OOM? check下，Xms 和Xmx 是不是太小&lt;br&gt;2. ZK集群的状态？" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=1;fillColor=#f8cecc;strokeColor=#b85450;size=24;position=0.7;" vertex="1" parent="Iivzt-dJwqlS0eaFPDWU-1">
+          <mxGeometry x="120" y="550" width="220" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="Iivzt-dJwqlS0eaFPDWU-23" value="正常tail -f /var/log/mathilde/lanaya.log&lt;br&gt;time=&quot;2019-10-21 07:24:35&quot; level=info msg=&quot;Last package to bulk success.&quot; bulkNumber=0 bulkSize=10000 costTime=0.276072442 esCostTime=0.27607134 logNumber=864 rows=864" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=0;size=29;position=0.1;fillColor=#d5e8d4;strokeColor=#82b366;base=21;" vertex="1" parent="Iivzt-dJwqlS0eaFPDWU-1">
+          <mxGeometry x="500" y="650" width="320" height="110" as="geometry"/>
+        </mxCell>
+        <mxCell id="Iivzt-dJwqlS0eaFPDWU-24" value="ACP 2.4（含）以后，kafka 地址不可能配错，如果没有日志，可能是kafka 集群异常。&lt;br&gt;如果写入失败，那是es 集群异常，这个是最可能的" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=1;fillColor=#f8cecc;strokeColor=#b85450;size=24;position=0.7;" vertex="1" parent="Iivzt-dJwqlS0eaFPDWU-1">
+          <mxGeometry x="120" y="650" width="220" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="Iivzt-dJwqlS0eaFPDWU-25" value="check es 是否正常？&lt;br&gt;curl -XGET -u &amp;lt;username&amp;gt;:&amp;lt;password&amp;gt; localhost:9200/_cat/health&lt;br&gt;如果green 100%m" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=0;size=29;position=0.1;fillColor=#d5e8d4;strokeColor=#82b366;base=21;" vertex="1" parent="Iivzt-dJwqlS0eaFPDWU-1">
+          <mxGeometry x="500" y="780" width="320" height="110" as="geometry"/>
+        </mxCell>
+        <mxCell id="Iivzt-dJwqlS0eaFPDWU-26" value="磁盘不足？&lt;br&gt;内存Xms 和Xmx&amp;nbsp;一般2g，limits 3g&lt;br&gt;索引&lt;br&gt;有red？ 非log，event，audit的话就删了" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=1;fillColor=#f8cecc;strokeColor=#b85450;size=24;position=0.7;" vertex="1" parent="Iivzt-dJwqlS0eaFPDWU-1">
+          <mxGeometry x="120" y="785" width="220" height="100" as="geometry"/>
         </mxCell>
       </root>
     </mxGraphModel>
